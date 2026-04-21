@@ -11,7 +11,7 @@ The project is built with a microservice mindset, utilizing a decoupled and scal
 * **The Engine:** Handles the core logic, frontend rendering, and secure communication with Google Cloud APIs.
 * **Visitor Logic:** Processes incoming headers to extract visitor signatures and trigger location lookups.
 
-### 🔴 [Redis High-Performance Store](./Vistor_project/DB)
+### 🔴 [Redis](./Vistor_project/DB)
 * **Storage:** A custom-built, lightweight Redis instance for ultra-fast, persistent logging of visitor data.
 * **Reliability:** Configured with disk-persistence to ensure data survives container restarts.
 
@@ -29,3 +29,12 @@ For granular details regarding API implementations, security configurations, or 
 
 ---
 *Built with focus on Scalability, Security, and Minimal Attack Surfaces.*
+
+# Home/Landing page
+![Alt Text](./path/to/your/image.png).
+
+# Vist Count page
+![Alt Text](./path/to/your/image.png).
+
+# About page
+![Alt Text](./path/to/your/image.png).
