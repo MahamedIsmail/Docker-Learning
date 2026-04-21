@@ -24,17 +24,16 @@ The project is built with a microservice mindset, utilizing a decoupled and scal
 ## 🔍 Deep Dives
 For granular details regarding API implementations, security configurations, or custom database builds, please refer to the dedicated documentation in each subdirectory:
 
-* **App Logic & API:** [Flask README](./Vistor_project/Flask/README.md)
-* **Database & Persistence:** [DB README](./Vistor_project/DB/README.md)
+* **App Logic & API:** [Flask README](./Flask/README.md)
+* **Database & Persistence:** [DB README](./DB/README.md)
 
 ---
-*Built with focus on Scalability, Security, and Minimal Attack Surfaces.*
 
 # Home/Landing page
-![Alt Text](./path/to/your/image.png).
+![Alt Text](./Project_screenshots/Home_page.png).
 
 # Vist Count page
-![Alt Text](./path/to/your/image.png).
+![Alt Text](./Project_screenshots/Count_page.png).
 
 # About page
-![Alt Text](./path/to/your/image.png).
+![Alt Text](./Project_screenshots/About_page.png).
