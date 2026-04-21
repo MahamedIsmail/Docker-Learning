@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+      
+  </head>
+  <body class="flex flex-col items-center justify-start min-h-screen  bg-gray-300 pt-40" >
+       
+  <!-- Navigation Bar -->
+
+<nav class="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-md border-b border-white/20 px-8 py-4 flex justify-between items-center">
+    <div class="text-xl font-black tracking-tighter text-gray-900">Visit where it counts </div>
+    <ul class="flex gap-8 text-sm font-bold uppercase tracking-widest text-gray-700">
+        <li class="hover:text-black cursor-pointer transition-colors"><a href="{{ url_for('home') }}">Home</a></li>
+        <li class="hover:text-black cursor-pointer transition-colors"><a href="{{ url_for('about') }}">About</a></li>
+        <li class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 cursor-pointer transition-all">View visitors</a></li>
+    </ul>
+</nav>
+  
+    
+<!--
+
+
+
+<div class="flex flex-col bg-white/70 backdrop-blur-xl  border border-gray-200 w-full max-w-[80%] h-[400px] rounded-2xl shadow-lg p-3">
+
+    <h1>About Us</h1>
+    welcome to the count visters app "Visit where it counts" in this project we are tracking the number of visitors to our website and their location using redis as a database to store the count and the location of the visitors and we are using flask as a web framework to create the web app and tailwind css for styling the web app and we are using google maps api to show the location of the visitors on the map.In this app we also other feters such as the growth of the visitors in the last 24 hours and we are also showing the ip address of the visitors and their city location. we hope you enjoy using our app and we are always open to feedback and suggestions to improve our app. thank you for visiting our app and we hope you have a great day fellow vistor.
+    </div>
+</div>
+
+--> 
+<div class="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-xl border border-gray-100 mb-10">
+    <h1 class="text-3xl font-bold text-black mb-4">About the Project</h1>
+    
+    <div class="space-y-6 text-gray-700 leading-relaxed">
+        <p class="text-lg italic font-medium text-gray-900 border-l-4 border-black pl-4">
+            "Visit where it counts"
+        </p>
+
+        <p>
+            Welcome to my Visitor Counter App. What started as a simple tracking tool evolved into a robust exercise in modern infrastructure, high-performance scaling, and DevOps best practices.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div class="p-5 bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
+                <h3 class="font-bold text-black mb-3 flex items-center">
+                    <span class="mr-2">🛠️</span> Core Tech Stack
+                </h3>
+                <ul class="list-disc list-inside text-sm space-y-2">
+                    <li><strong>Flask & Redis:</strong> Real-time data processing and storage.</li>
+                    <li><strong>Google Maps API:</strong> Geospatial visualization of visitor traffic.</li>
+                    <li><strong>Tailwind CSS:</strong> A clean, utility-first responsive interface.</li>
+                    <li><strong>IP Geolocation:</strong> Live tracking of city-level visitor data.</li>
+                </ul>
+            </div>
+            
+            <div class="p-5 bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
+                <h3 class="font-bold text-black mb-3 flex items-center">
+                    <span class="mr-2">🚀</span> Infrastructure & DevOps
+                </h3>
+                <ul class="list-disc list-inside text-sm space-y-2">
+                    <li><strong>Docker Compose:</strong> Full orchestration of the app ecosystem.</li>
+                    <li><strong>Custom Redis:</strong> Hand-built Redis image with optimized configs.</li>
+                    <li><strong>Nginx Scaling:</strong> Reverse proxy setup for real-time load handling.</li>
+                    <li><strong>Multi-stage Builds:</strong> Optimized Dockerfiles for lightweight deployments.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="border-gray-100">
+
+        <div class="bg-black text-white p-6 rounded-lg shadow-xl">
+            <h3 class="text-xl font-bold mb-3 flex items-center">
+                <span class="mr-2">🔧</span> Technical Notes
+            </h3>
+            <div class="text-gray-300 text-sm space-y-3">
+                <p>
+                    I built this app with a focus on <strong>reliability and performance</strong>. To ensure the application never breaks due to external updates, I strictly <strong>froze all dependencies</strong> in my requirements; this guarantees the Docker image remains stable and functional years from now.
+                </p>
+                <p>
+                    Furthermore, I implemented <strong>multi-stage Docker builds</strong>. By separating the build environment from the final runtime, I significantly reduced the image size, resulting in faster deployment times and a smaller security attack surface.
+                </p>
+                <p>
+                    Combined with an <strong>Nginx</strong> configuration for horizontal scaling, this project is ready for real-world traffic. 
+                </p>
+            </div>
+            <p class="mt-6 font-medium italic text-white">
+                Thank you for visiting, and I hope you have a great day, fellow visitor!
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+  </body>
+</html>

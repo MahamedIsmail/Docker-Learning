@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+       
+    </style> 
+  </head>
+  <body class="flex flex-col items-center justify-start min-h-screen  bg-gray-300 pt-40" >
+       
+  <!-- Navigation Bar -->
+
+<nav class="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-md border-b border-white/20 px-8 py-4 flex justify-between items-center">
+    <div class="text-xl font-black tracking-tighter text-gray-900">Visit where it counts </div>
+    <ul class="flex gap-8 text-sm font-bold uppercase tracking-widest text-gray-700">
+        <li class="hover:text-black cursor-pointer transition-colors"><a href="{{ url_for('home') }}">Home</a></li>
+        <li class="hover:text-black cursor-pointer transition-colors"><a href="{{ url_for('about') }}">About</a></li>
+        <li class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 cursor-pointer transition-all">View visitors</a></li>
+    </ul>
+</nav>
+  
+    
+
+
+
+<div class="flex flex-col bg-white/70 backdrop-blur-xl  border border-gray-200 w-full max-w-[45%] h-auto rounded-2xl shadow-lg p-3">
+
+    <div class="  rounded-xl overflow-hidden h-[700px] w-full">
+        <img src="static/Images/thumb-1920-1315631.png" alt="Image" class="w-full h-full object-cover">
+    </div> 
+    
+    <div class="py-4 px-2">
+        <h2 class="text-xl font-bold text-gray-900">Welcome visitor to the Visitor count Project where you can track the number of visitors form all over the world.. get ready its time to travel</h2>
+        <p class="text-gray-500 text-sm mb-4 italic">Visitor count tracker</p>
+      
+        <div class="flex items-center justify-between bg-gray-50 p-4 rounded-xl border border-gray-100 mb-6">
+    
+    <div class="flex items-center gap-3">
+       
+        <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-none">
+            Visitors status the last 24 hours
+        </span>
+    </div>
+
+    <div class="flex items-center gap-2">
+        <div class="flex items-center bg-green-500 text-white text-sm font-black px-3 py-1 rounded-lg shadow-[0_2px_10px_rgba(34,197,94,0.4)]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 15l7-7 7 7" />
+            </svg>
+            
+            {{growth}}%
+        </div>
+        
+        <span class="text-[10px] font-bold text-gray-500 uppercase">24H</span>
+    </div>
+</div>
+
+
+<form action="{{ url_for('count') }}" method="get">
+   
+
+<button class="w-full bg-black text-white py-4 rounded-xl font-black text-lg hover:scale-[1.02] transition-all shadow-xl">
+    View all the vistors around the globe 
+</button>
+
+</form>
+    </div>
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<script>var Maps_API_KEY = "{{ Maps_API_KEY }}";</script>
+<script >var User_lat = {{ lat }}; var User_lng = {{ lng }};</script>
+    
+<script src="{{url_for('static', filename='Js/map.js')}}"></script>
+
+  
+  </head>
+  <body class="flex flex-col items-center justify-start min-h-screen  bg-gray-300 pt-40" >
+       
+  <!-- Navigation Bar -->
+
+<nav class="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-md border-b border-white/20 px-8 py-4 flex justify-between items-center">
+    <div class="text-xl font-black tracking-tighter text-gray-900">Visit where it counts </div>
+    <ul class="flex gap-8 text-sm font-bold uppercase tracking-widest text-gray-700">
+        <li class="hover:text-black cursor-pointer transition-colors"><a href="{{ url_for('home') }}">Home</a></li>
+        <li class="hover:text-black cursor-pointer transition-colors"><a href="{{ url_for('about') }}">About</a></li>
+        <li class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 cursor-pointer transition-all">Visitor count tracker</a></li>
+    </ul>
+</nav>
+  
+
+
+
+<div class="flex flex-col bg-white/70 backdrop-blur-xl  border border-gray-200 w-full max-w-[80%] h-[800px] rounded-2xl shadow-lg p-3">
+
+ <div class="w-full h-full" id="map"></div>
+ <div class="mt-8 w-full max-w-[80%] flex flex-col md:flex-row gap-8 px-4">
+    
+    <div class="flex-1 border-l-4 border-red-600 pl-6 py-2">
+        <h3 class="text-xs font-black uppercase tracking-[0.3em] text-black mb-2">Live Heartbeat</h3>
+        <p class="text-[13px] text-gray-800 leading-relaxed font-medium">
+            The <span class="bg-red-50 px-1 text-red-700">red pulse</span> indicates a persistent connection to our Redis engine. Every visitor is captured and calculated in under 100ms for a truly live experience.
+        </p>
+    </div>
+
+    <div class="flex-1 border-l-4 border-black pl-6 py-2">
+        <h3 class="text-xs font-black uppercase tracking-[0.3em] text-black mb-2">Global Mapping</h3>
+        <p class="text-[13px] text-gray-800 leading-relaxed font-medium">
+            By resolving your IP into geographic coordinates, we visualize our global footprint. This creates a real-time bridge between your city and our infrastructure.
+        </p>
+    </div>
+
+    <div class="flex-1 border-l-4 border-gray-300 pl-6 py-2">
+        <h3 class="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-2">Engine</h3>
+        <p class="text-[13px] text-gray-500 leading-relaxed">
+            Optimized via <span class="text-black font-bold text-[11px]">DOCKER</span> & <span class="text-black font-bold text-[11px]">NGINX</span>. Built with frozen dependencies for permanent stability.
+        </p>
+    </div>
+
+</div>
+<div class="w-full h-[15%] bg-gray-100" id="map"></div>
+
+<div class="flex flex-wrap items-center justify-between bg-black text-white px-5 py-3 w-full">
+    
+    <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 bg-zinc-800 px-3 py-1 rounded">
+            <span class="flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-red-500 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+            </span>
+            <span class="text-xs font-bold font-mono text-white tracking-tighter">LIVE: {{ count }}</span>
+        </div>
+        
+        <span class="text-[11px] text-gray-400 font-medium uppercase tracking-wider">
+            Visitor from <span class="text-white">{{ city }}</span>
+        </span>
+    </div>
+
+    <div class="flex items-center gap-6">
+        <div class="text-[11px] font-mono">
+            <span class="text-gray-500 uppercase">IP</span> {{ ip }}
+        </div>
+        
+        <div class="hidden sm:block text-[10px] text-gray-500 border border-gray-800 px-2 py-0.5 rounded uppercase tracking-widest">
+            Nginx Instance
+        </div>
+    </div>
+</div>
+   
+</div>
+
+
+    </div>
+</div>
+
+
+
+
+
+  </body>
+</html>

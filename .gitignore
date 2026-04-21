@@ -1,0 +1,6 @@
+# Ignore all .env files in any directory i will instead show .env.exemple file which is a template for .env file, you can copy it and rename it to .env and fill in the values as needed.
+Vistor_project/Flask/.env
+# Ignore AWS CLI 
+hello_flask/aws/ 
+# Ignore the AWS CLI zip file, you can remove this line if you want to keep the zip file in your repository, but it's generally a good practice to ignore large binary files that are not necessary for the functioning of your application.
+hello_flask/awscliv2.zip

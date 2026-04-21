@@ -1,0 +1,49 @@
+version: '3.8' 
+
+services:
+    webapp:
+
+        build: ./Flask
+        volumes:
+          - ./Flask:/app
+        ports:
+        -  "5000" 
+
+        env_file:
+         - ./Flask/.env
+
+        deploy:
+         replicas: 3
+         
+        depends_on: 
+        - redis_db
+
+
+    redis_db:
+        build: ./DB
+
+        command: "./redis-server  /app/custom-redis.conf"
+
+        volumes:
+            - redis_db:/redis_data
+
+        configs:
+           - source : redis_config
+             target: /app/custom-redis.conf
+
+    nginx:
+        build: ./Nginx
+        ports: 
+        - "80:80"   
+        depends_on:
+        - webapp      
+
+
+
+configs:
+    redis_config:
+        file:  ./DB/redis.config
+
+
+volumes:
+    redis_db: 

@@ -1,0 +1,29 @@
+
+#Build stage 1 
+
+FROM python:3.8-slim as Build 
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y \
+    python3-dev \
+    default-libmysqlclient-dev \
+    build-essential \
+    pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+
+
+RUN pip install flask mysqlclient
+
+# Stage 2: production stage 
+FROM python:3.8-slim 
+
+WORKDIR /app
+
+COPY --from=Build /app /app
+
+EXPOSE 5002
+
+CMD ["python","app.py"]
+
+
