@@ -1,4 +1,4 @@
-# 📍 Visitor Intelligence & Geo-Location System
+# 📍 Visitor count project "Vist where it counts"
 
 **Purpose:** A high-performance web application designed to capture real-time visitor data, resolve geographical coordinates via the **Google Maps Geocoding API**, and visualize location-based insights through a distributed architecture.
 
