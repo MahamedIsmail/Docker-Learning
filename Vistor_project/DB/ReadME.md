@@ -1,6 +1,6 @@
 
 # Redis Data Store 
----
+
 
 Custom Redis 8.0.0 built from source for better control and smaller image size.
 
@@ -20,7 +20,6 @@ Custom Redis 8.0.0 built from source for better control and smaller image size.
 **Benefit: The production image does not contain compilers, source code, or build tools, making it significantly smaller and more secure.**
 
 ---
-
 ### Config & Networking 
 
 * Access (bind 0.0.0.0)
