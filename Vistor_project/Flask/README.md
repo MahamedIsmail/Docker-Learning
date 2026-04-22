@@ -31,11 +31,9 @@ The Dockerfile automates the installation of all dependencies via requirements.t
 ## Workflow/Setup
 
 * The Flask(webbapp) app communicates with redis_DB(my redis datbase servername in docker-compse file) via its default port. Access is strictly governed by default config,
-handled via custom configurations that override default behavior; see [DB/README.md](./DB/README.md)for more details.
+handled via custom configurations that override default behavior see [DB/README.md](./DB/README.md) for more details.
 
 * Decoupled Configuration (Environment Variables)
 To keep the application logic separate from the infrastructure, all connection strings are managed via a .env file.
-
-* Dynamic Mapping: By setting REDIS_HOST=servername_of_your_redisdatabas(In your docker-compose.yml redis_db , the application remains "environment-agnostic," allowing for instant infrastructure swaps without code changes.
 
 * Implementation(with .env file): Use the provided .env.example template to configure your local environment. Simply copy it to a new file named .env and update the values to match your specific setup
