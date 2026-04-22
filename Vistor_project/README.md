@@ -22,10 +22,10 @@ The project is built with a microservice mindset, utilizing a decoupled and scal
 ---
 
 ## 🔍 Deep Dives
-For granular details regarding API implementations, security configurations, or custom database builds, please refer to the dedicated documentation in each subdirectory:
+For granular details regarding API implementations, security configurations or custom database builds, please refer to the dedicated documentation in each subdirectory:
 
-* **App Logic & API:** [Flask README](./Flask/README.md)
-* **Database & Persistence:** [DB README](./DB/README.md)
+* **Flask:** [Flask README](./Flask/README.md)
+* **Redis:** [DB README](./DB/README.md)
 
 ---
 
