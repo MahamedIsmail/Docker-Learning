@@ -1,12 +1,12 @@
 
-# 🐍 Flask Service Layer
+# 🐍 Flask Service
 
-This directory houses the core web application, responsible for orchestrating the user interface, backend logic, and third-party API integrations.
+This directory houses the core web application, responsible for orchestrating the user interface, backend logic and third-party API integrations.
 
 ## 🛠️ Technical Stack
 * Backend: Python / Flask
 
-* Frontend: HTML5 & Tailwind CSS
+* Frontend: HTML & Tailwind CSS
 
 * API Integration: Google Maps Geocoding API
 
@@ -14,25 +14,24 @@ This directory houses the core web application, responsible for orchestrating th
 
 ## 🔑 Key Features
 
-* 🖌️ Modern UI
+* **🖌️ Modern UI**:
 The interface is built using Tailwind CSS, a utility-first framework that ensures a responsive and lightweight design without the overhead of massive CSS files.
 
-* 🗺️ Dynamic Geolocation Strategy
-To visualize visitor data, I integrated the Google Maps API. Rather than displaying static data, the application processes visitor information and renders an interactive map where geographic markers are generated in real-time based on backend records.
+* **🗺️ Dynamic Geolocation Strategy**:
+To visualize visitor data, I integrated the Google Maps API. Rather than displaying static data, the application processes visitor information and renders an interactive map where geographic markers are generated in real-time based on backend records(This project uses generated mock data; can be swapped for real data with proper access).
 
 
-* The Flask Docker Image
-Base Image: Uses a slimmed-down Python base image to minimize the attack surface and keep the image size small.
+* **The Flask Docker Image**:
+  Uses a slimmed-down Python base image to minimize the attack surface and keep the image size small.
 
-* Automation
+* **Automation**:
 The Dockerfile automates the installation of all dependencies via requirements.txt and sets up the environment for production.
-
 
 
 ## Workflow/Setup
 
 * The Flask(webbapp) app communicates with redis_DB(my redis datbase servername in docker-compse file) via its default port. Access is strictly governed by default config,
-handled it with custom configurations that passed defult behovier see DB/README.md for more detiels.
+handled via custom configurations that override default behavior; see [DB/README.md](./DB/README.md)for more details.
 
 * Decoupled Configuration (Environment Variables)
 To keep the application logic separate from the infrastructure, all connection strings are managed via a .env file.
