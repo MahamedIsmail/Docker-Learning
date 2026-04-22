@@ -1,5 +1,5 @@
 
-# Redis Data Store 
+# Redis  
 
 
 Custom Redis 8.0.0 built from source for better control and smaller image size.
