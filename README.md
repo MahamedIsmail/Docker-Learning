@@ -4,3 +4,4 @@ This repository serves as a portfolio of projects where I explore and implement 
 
 
 ![Demo](Video%20Project.gif)
+<img src="demo.gif" alt="Demo" width="100%">
